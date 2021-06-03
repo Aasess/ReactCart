@@ -15,30 +15,43 @@ const Login = () => {
 
     const handleSubmit =(e) => {
             e.preventDefault();
-            dispatch(login({
-                username:username,
-                loggedIn: true
-            }))
+            if(username === '' || password === ''){
+                
+            }else{
+                dispatch(login({
+                    username:username,
+                    loggedIn: true
+                }))
+            }
     }
     return(
-        <div className="login">
-            <form className="login_form" onSubmit={(e)=> handleSubmit(e)}>
-                <h1>Login Here</h1>
-                <input 
-                    type="text" 
-                    name="Username" 
-                    placeholder="Enter Username" 
-                    value={username} 
-                    onChange={(e)=>setUserName(e.target.value)}/>
+        <div className="container border rounded mt-5 bg-dark text-white w-25">
+            <form onSubmit={(e)=> handleSubmit(e)}>
+                <h3 className="text-center mt-4">Enter your detail to proceed</h3>
+                <hr/>
+                <div className="form-group">
+                    <input 
+                        type="text" 
+                        className="form-control"
+                        name="Username" 
+                        placeholder="Enter Username" 
+                        value={username} 
+                        onChange={(e)=>setUserName(e.target.value)}/>
+                </div>
                 
-                <input 
-                    type="password" 
-                    name="Password" 
-                    placeholder="Enter Password" 
-                    value={password} 
-                    onChange={(e)=> setPassword(e.target.value)}/>
+                <div className="form-group">
+                    <input 
+                        type="password" 
+                        className="form-control"
+                        name="Password" 
+                        placeholder="Enter Password" 
+                        value={password} 
+                        onChange={(e)=> setPassword(e.target.value)}/>
+                </div>
                 
-                <button 
+                
+                <button
+                    className="form-control btn btn-large btn-success mb-3"
                     type="submit">Login
                 </button>
             </form>
