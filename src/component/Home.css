@@ -39,6 +39,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+
+.productlist {
+    height: 600px;
+    overflow-y:auto;
+}
+
 @media (max-width: 800px){
     body {
         font-size: small;

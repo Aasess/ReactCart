@@ -46,7 +46,10 @@ const ProductList = () => {
     })
     return (
                 <div className="container">
-                    {display}
+                    <div className="productlist mt-2">
+                        {display}
+                    </div>
+                    
                 </div>
                 
             )
