@@ -6,7 +6,7 @@ const initialState = {
         id: 1,
         title: "This is the COOLEST Cube Ever",
         description:
-          "This cube will keep you busy the entire day and it is very fun to play with",
+          "This cube will keep you busy the entire day and it is very fun to play with and to improve mind.",
         detail:"Rubik's Cube is a puzzle cube, and the world's biggest selling toy of all time with over 300,000,000 (300 million) sold. It was invented in 1974 by Hungarian sculptor and professor of architecture Ernő Rubik. In a classic Rubik's Cube, each of the six faces is covered by nine stickers, each of one of six solid colours: white, red, blue, orange, green, and yellow. In currently sold models, white is opposite yellow, blue is opposite green, orange is opposite red, and some might replace blue with black or purple.",
         price: 15.0,
         image:
@@ -41,19 +41,38 @@ const initialState = {
      name:'product',
      initialState : initialState,
      reducers:{
+         //view item is clicked
          item: (state,action)=>{
              state.currentItem = action.payload.product;
          },
+         //insert into cart button is clicked
          cart: (state,action)=>{
-             state.cart = state.cart.concat(action.payload.product);
-         },
+            // state.cart = state.cart.concat(action.payload);
+            const inCart = state.cart.find((product)=> product.id===action.payload.id? true: false)
+
+            inCart? state.cart.forEach((product,index)=>{
+                if(product.id === action.payload.id){
+                    state.cart[index].qty += 1
+                }
+            }): state.cart.push(action.payload)   
+        },
+        //if logout is clicked
          cartEmpty:(state)=>{
             state.cart = []
-         }
+         },
+
+         //if delete button is clicked
+         cartFilter:(state,action)=>{
+            const result = state.cart.filter((product)=>{
+                 return product.id !== action.payload.id
+             })
+            state.cart = result
+         },
+
 
      }
  })
 
-export const {item,cart,cartEmpty} = productSlice.actions
+export const {item,cart,cartEmpty,cartFilter} = productSlice.actions
 
  export default productSlice.reducer

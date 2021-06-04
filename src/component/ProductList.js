@@ -6,9 +6,8 @@ import {item,cart} from '../features/productSlice'
 const ProductList = () => {
     const selectProduct = useSelector((state)=> state.product.products)
     // const singleProduct = useSelector((state)=> state.product.currentItem)
-    const cartprev = useSelector((state)=>state.product.cart)
+    // const cartprev = useSelector((state)=>state.product.cart)
     const dispatch = useDispatch()
-    console.log(cartprev)
     const displayItem = (product) => {
         dispatch(item({
             product:product.product
@@ -18,7 +17,11 @@ const ProductList = () => {
     const addCart =(product) => {
         // console.log(product.product)
         dispatch(cart({
-            product:product.product.id
+            id:product.product.id,
+            title:product.product.title,
+            price:product.product.price,
+            image:product.product.image,
+            qty: 1
         }))
     }
     const display = selectProduct.map((product)=>{
@@ -31,7 +34,7 @@ const ProductList = () => {
             <div className="col-6">
                 <h4>{product.title}</h4>
                 <p>{product.description}</p>
-                <h5 className="float-left ">$ {product.price}</h5>
+                <h5 className="float-left mt-5">$ {product.price}</h5>
             </div>
 
             <div className="col-3 float-right mt-4">

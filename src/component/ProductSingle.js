@@ -6,7 +6,7 @@ const ProductSingle = () => {
     console.log(selectProduct)
     return (
         <div className="container">
-            <div className="row mt-3 mb-3">
+            <div className="mt-3 mb-3 text-center">
                 <h4 className="">{selectProduct.title}</h4>
             </div>
             <div className="row">

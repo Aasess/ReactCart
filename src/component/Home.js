@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch,useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import './Home.css'
@@ -10,13 +10,17 @@ import ProductSingle from './ProductSingle'
 import Nav from './Nav';
 
 const Home = () => {
-    // const [state,setState] = React.useState(true)
-    
-   
-
     const singleProduct = useSelector((state)=> state.product.currentItem)
     const cartProduct = useSelector((state)=>state.product.cart)
     
+   //function to display qty
+    const qtyDisplay = () => {
+        let qty_sum = 0
+        cartProduct.forEach((product)=>{
+        qty_sum += product.qty                
+        })
+        return qty_sum
+    }
     
    
     // if(singleProduct != null){
@@ -31,9 +35,9 @@ const Home = () => {
                     {/* {state?<ProductList />:<ProductSingle />} */}
                     <ProductList />
                 </div>
-                <Link to="/cart"><a className="float-right p-4 mr-5 pointer cart" >
+                <Link to="/cart"><a className="float-right p-4 mr-5 pointer cart mb-3" >
                 <img src="https://s3.amazonaws.com/nuggetcomfort/cart_icon.png" width="55px"/>
-                    <div className="cart-count text-center">{cartProduct.length}</div>
+                    <div className="cart-count text-center">{qtyDisplay()}</div>
                 </a>
                 </Link>
             </div>

@@ -25,9 +25,9 @@ const Login = () => {
             }
     }
     return(
-        <div className="container border rounded mt-5 bg-dark text-white w-25">
+        <div className="container border rounded  bg-dark text-white w-25" style={{ position:"absolute", top:"20%",left:"40%"}}>
             <form onSubmit={(e)=> handleSubmit(e)}>
-                <h3 className="text-center mt-4">Enter your detail to proceed</h3>
+                <h3 className="text-center mt-4 p-2">Enter your detail to proceed</h3>
                 <hr/>
                 <div className="form-group">
                     <input 
@@ -51,7 +51,7 @@ const Login = () => {
                 
                 
                 <button
-                    className="form-control btn btn-large btn-success mb-3"
+                    className="form-control btn btn-large btn-success mb-4"
                     type="submit">Login
                 </button>
             </form>
