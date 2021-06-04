@@ -1,6 +1,6 @@
 
 .cart {
-    position: sticky;
+    position: fixed;
     top: 83%;
     right: 20px;
     z-index: 1;

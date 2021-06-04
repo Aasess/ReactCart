@@ -32,6 +32,16 @@ const initialState = {
         image:
           "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1374&q=80",
       },
+      {
+        id: 4,
+        title: "Chessy Pizza",
+        description:
+          "Pizza is a flatbread generally topped with tomato sauce and cheese and baked in an oven.",
+        detail:" Cheese gives us almost all the salt, fat, and protein of the whole pie - three building blocks of what makes food taste good and have good texture. From what I’ve seen, most failures come in the form of simple lack of cheese, rather than poor cheese quality. High end fresh mozzarella might separate a good pizza from a great pizza, but all you usually need to go from bad to good is to just throw on more of whatever regular cheese you use.",
+          price: 150.0,
+        image:
+          "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+      },
     ],
     cart: [],
     currentItem: null,
