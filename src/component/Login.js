@@ -3,6 +3,7 @@ import React from 'react';
 import {useDispatch} from 'react-redux';
 import {login} from '../features/userSlice'
 
+import './Login.css'
 const Login = () => {
     // //in order to use store.getState() function from our store
     // const user = useSelector(selectUser);
@@ -25,7 +26,7 @@ const Login = () => {
             }
     }
     return(
-        <div className="container border rounded  bg-dark text-white w-25" style={{ position:"absolute", top:"20%",left:"40%"}}>
+        <div className="container border rounded  bg-dark text-white box" style={{ position:"absolute", top:"20%"}}>
             <form onSubmit={(e)=> handleSubmit(e)}>
                 <h3 className="text-center mt-4 p-2">Enter your detail to proceed</h3>
                 <hr/>

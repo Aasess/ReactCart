@@ -1,0 +1,11 @@
+@media (max-width: 800px){
+    h4{
+        font-size: medium;
+    }
+    .delete {
+        margin-bottom: 10px;
+        float: left;
+    }
+
+
+}

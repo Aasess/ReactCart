@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from './Nav';
+import './Cart.css'
 import { useSelector,useDispatch } from 'react-redux';
 
 import {cartFilter} from '../features/productSlice';
@@ -27,20 +28,20 @@ const Cart = () => {
 
     const cartProducts = cartProduct.map((product)=>{
         return(
-            <div className="row border rounded bg-white mr-auto mb-2" key={product.id}>
-                <div className="col-3 p-0">
+            <div className="row border rounded bg-white mr-auto mb-2 " key={product.id}>
+                <div className="col-12 col-md-3 p-0">
                     <img src={product.image} alt={product.id} className="img-thumbnail"/>
                 </div>
-            <div className="col-5 ml-2 mt-3">
+            <div className="col-md-5 ml-2 mt-3">
                     <p>{product.title}</p>
                     <br />
-                    <p className="mt-2">$ {product.price}</p>
+                    <p className="mt-2 price">$ {product.price}</p>
             </div>
-            <div className="col-3 ml-5 mt-3">
+            <div className="col-md-3 ml-5 mt-3">
                 {/* <small>Qty:<input type="number" className=" input-sm w-25" min="0" defaultValue="1"/></small> */}
                 <small className="ml-4">QTY: {product.qty}</small>
                 <br/>
-                <button className="ml-4 mt-4 btn" onClick={()=>handleDelete(product.id)}><i className="fas fa-trash-alt"></i></button>
+                <button className="ml-4 mt-4 btn delete" onClick={()=>handleDelete(product.id)}><i className="fas fa-trash-alt"></i></button>
             </div>
         </div>
         )    
@@ -54,10 +55,10 @@ const Cart = () => {
                 :
                 <div className="container mt-5">
                     <div className="row">
-                        <div className="col-8">
+                        <div className="col-12 col-md-8">
                             { cartProducts }
                         </div>
-                        <div className="col-3 border rounded bg-white pt-4" style={{height:'200px'}}>
+                        <div className="col-12 col-md-3 border rounded bg-white pt-4 summary" style={{height:'200px'}}>
                            <h4>Cart Summary</h4>
                            <hr />
                            <div>

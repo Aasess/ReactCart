@@ -38,3 +38,43 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+@media (max-width: 800px){
+    body {
+        font-size: small;
+    }
+    h4 {
+        font-size: medium;
+    }
+    p {
+        font-size: small;
+    }
+    h5 {
+        font-size: small;
+    }
+   .cart {
+       width:75px;
+       height:50px;
+       right:-10px;
+   } 
+   .cart-count {
+    height: 25px;
+    width: 25px;
+    font-size: 1em;
+   }
+   .cart img {
+       width:50px;
+       margin-top:-20px;
+       margin-left:-10px;
+       
+   }
+
+   #logout {
+       font-size:medium;
+   }
+   #homeicon {
+       font-size:large;
+       margin-left:0px;
+       padding-top:5px;
+   }
+}

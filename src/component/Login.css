@@ -1,0 +1,20 @@
+
+@media (max-width: 800px) {
+   h3 {
+       font-size: large;
+   }
+
+    .box {
+        width: 75%;
+        left: 12%;
+        
+    }
+}
+
+@media (min-width: 801px){
+    .box {
+        width: 25%;
+        left: 40%;
+    }
+
+}

@@ -25,11 +25,11 @@ const Nav = () => {
     }
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+            <nav className="navbar navbar-expand navbar-dark bg-dark text-white">
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">
             <li className="nav-item active">
-               <Link to ="/" ><a className="nav-link btn" onClick={()=> homeHandler()}><h4><i className="fa fa-home"></i></h4></a></Link>
+               <Link to ="/" ><a className="nav-link btn" onClick={()=> homeHandler()}><h4 id="homeicon"><i className="fa fa-home"></i></h4></a></Link>
             </li>  
             
         </ul>
@@ -38,7 +38,7 @@ const Nav = () => {
             <p className="float-right">Welcome, <span style={{ color:'#32CD32' }}><strong>{user}</strong></span></p>
         </div>
         
-        <Link to ="/" style={{color:"white"}}><a className="btn" onClick = {()=>handleLogout()}>Logout</a></Link>
+        <Link to ="/" style={{color:"white"}}><a className="btn" onClick = {()=>handleLogout()}><span id="logout">Logout</span></a></Link>
     </nav>
         </div>
     )
