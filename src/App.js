@@ -22,7 +22,8 @@ const App = () => {
                     {user.loggedIn? <Home />:<Login />}
             </Route>
                 <Route exact path="/cart" component={Cart}>
-                {!user.loggedIn && <Login />}      
+                    {/* redirect to login page if not logged in */}
+                    {!user.loggedIn && < Redirect to ='/'/>} 
                 </Route>
             </Switch>
         </Router>
