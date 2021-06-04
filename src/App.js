@@ -21,7 +21,9 @@ const App = () => {
             <Route exact path="/">
                     {user.loggedIn? <Home />:<Login />}
             </Route>
-                <Route exact path="/cart" component={Cart}/>
+                <Route exact path="/cart" component={Cart}>
+                {!user.loggedIn && <Login />}      
+                </Route>
             </Switch>
         </Router>
         )
