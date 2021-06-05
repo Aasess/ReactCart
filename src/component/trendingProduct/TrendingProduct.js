@@ -10,7 +10,7 @@ const TrendingProduct = () => {
         return product.trending
     }) 
 
-    const display = trendProduct.map((product)=>{
+    const display = trendProduct.slice(0,6).map((product)=>{
         return(
             <div className="col-6 col-md-2">
                 <div className="card fproduct" >
@@ -19,7 +19,7 @@ const TrendingProduct = () => {
                         <button className="btn btn-sm btn-info">Add to Cart</button>
                     </div>
                     <div className="card-body">
-                        <p className="card-text">{product.title}</p>
+                        <p className="card-text" style={{fontSize:"0.9rem"}}>{product.title}<span className="float-right">${product.price}</span></p>
                     </div>
                 </div>
             </div>)

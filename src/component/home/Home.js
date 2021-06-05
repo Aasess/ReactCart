@@ -36,8 +36,8 @@ const Home = () => {
                 <Nav />
                 <div className="container-fluid">
                     {/* {state?<ProductList />:<ProductSingle />} */}
-                    <div className="row">
-                        <div className="col-3 ml-3 mt-3 pl-5 mb-3 border bg-white">
+                    <div className="row mt-3">
+                        <div className="col-3 ml-3 pl-5 mb-3 border bg-white">
                             <h3>Category</h3>
                         </div>
                         <div className="col-8 ">
