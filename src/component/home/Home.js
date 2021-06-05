@@ -32,7 +32,7 @@ const Home = () => {
     if(singleProduct == null){
         return (
             <div>
-                <Nav />
+                <Nav catFunction = {filterProduct}/>
                 <div className="container-fluid">
                     {/* {state?<ProductList />:<ProductSingle />} */}
                     <div className="row mt-3">

@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 
 const ProductSingle = () => {
     const selectProduct = useSelector((state)=>state.product.currentItem)
-    console.log(selectProduct)
     return (
         <div className="container">
             <div className="mt-3 mb-3 text-center">

@@ -3,9 +3,9 @@ import React from 'react'
 import { useDispatch,useSelector } from 'react-redux';
 import {logout} from '../../features/userSlice';
 import {item,cartEmpty} from '../../features/productSlice'
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
-const Nav = () => {
+const Nav = (props) => {
     const dispatch = useDispatch()
     const user = useSelector((state)=>state.user.username)
 
@@ -22,6 +22,9 @@ const Nav = () => {
         dispatch(item({
             product:null
         }))
+        
+        props.catFunction && props.catFunction(null)
+        props.value && <Redirect to = '/'/>
     }
     return (
         <div>
@@ -29,7 +32,7 @@ const Nav = () => {
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">
             <li className="nav-item active pt-2">
-               <Link to ="/" ><a className="nav-link btn" onClick={()=> homeHandler()}><h4 id="homeicon"><i className="fa fa-home"></i> A and B online Nepal</h4></a></Link>
+               <Link to ="/" ><a className="nav-link btn" onClick={()=> homeHandler()}><h4 id="homeicon"><i className="fa fa-home"></i> A and B Online Nepal</h4></a></Link>
             </li> 
         </ul>
         

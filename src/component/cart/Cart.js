@@ -48,7 +48,7 @@ const Cart = () => {
 })
     return (
         <div>
-            <Nav />
+            <Nav value={true}/>
             {/* display empty message when no product in the cart */}
             {
                 cartProduct.length === 0?<h3 className="text-center mt-5" style={{color:"#8b0000"}}>No products in the cart</h3>
