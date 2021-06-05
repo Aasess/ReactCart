@@ -49,6 +49,20 @@ a:hover {
     text-decoration: none;
 }
 
+.priceproduct {
+    position: absolute;
+    top: 75%;
+}
+
+.productall {
+    transition: 0.2s;
+    box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2);
+}
+.productall:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transform: scale(1.01);
+}
+
 
 @media (max-width: 800px){
     body {
