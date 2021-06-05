@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {useDispatch} from 'react-redux';
-import {login} from '../features/userSlice'
+import {login} from '../../features/userSlice'
 
 import './Login.css'
 const Login = () => {

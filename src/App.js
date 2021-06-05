@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux';
 // import { BrowserRouter as Router,Switch,Route }from "react-router-dom";
 
 import './App.css'
-import Login from './component/Login'
-import Home from './component/Home'
-import Cart from './component/Cart'
+import Login from './component/login/Login'
+import Home from './component/home/Home'
+import Cart from './component/cart/Cart'
 import {BrowserRouter as Router,
         Switch,
         Route,Redirect

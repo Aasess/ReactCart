@@ -1,8 +1,8 @@
 
 .cart {
     position: fixed;
-    top: 83%;
-    right: 20px;
+    top: 85%;
+    right: 8px;
     z-index: 1;
     border-radius: 121px 121px 121px 121px;
     -moz-border-radius: 121px 121px 121px 121px;
@@ -44,6 +44,11 @@
     height: 600px;
     overflow-y:auto;
 }
+
+a:hover {
+    text-decoration: none;
+}
+
 
 @media (max-width: 800px){
     body {

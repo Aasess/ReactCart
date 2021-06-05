@@ -1,8 +1,8 @@
 /* eslint-disable */
 import React from 'react'
 import { useDispatch,useSelector } from 'react-redux';
-import {logout} from '../features/userSlice';
-import {item,cartEmpty} from '../features/productSlice'
+import {logout} from '../../features/userSlice';
+import {item,cartEmpty} from '../../features/productSlice'
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
@@ -29,15 +29,10 @@ const Nav = () => {
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">
             <li className="nav-item active">
-               <Link to ="/" ><a className="nav-link btn" onClick={()=> homeHandler()}><h4 id="homeicon"><i className="fa fa-home"></i></h4></a></Link>
+               <Link to ="/" ><a className="nav-link btn" onClick={()=> homeHandler()}><h4 id="homeicon"><i className="fa fa-home"></i> A and B online Nepal</h4></a></Link>
             </li> 
         </ul>
-        <div className="input-group input-group-sm mx-auto w-50">
-                <div className="input-group-prepend">
-                    <span className="input-group-text ml-5" id="basic-addon1"><i className="fas fa-search"></i></span>
-                </div>
-                <input type="text" class="form-control" placeholder="Search For Product..." aria-label="Username" aria-describedby="basic-addon1"/>
-            </div>
+        
     </div>
         <div className="mt-3 float-right">
             <p className="float-right">Welcome, <span style={{ color:'#32CD32' }}><strong>{user}</strong></span></p>

@@ -1,9 +1,9 @@
 import React from 'react'
-import Nav from './Nav';
+import Nav from '../nav/Nav';
 import './Cart.css'
 import { useSelector,useDispatch } from 'react-redux';
 
-import {cartFilter} from '../features/productSlice';
+import {cartFilter} from '../../features/productSlice';
 
 const Cart = () => {
     const cartProduct = useSelector((state)=>state.product.cart)

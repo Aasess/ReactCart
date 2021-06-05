@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 
 import './Home.css'
 // import {logout} from '../features/userSlice'
-import ProductList from './ProductList'
-import ProductSingle from './ProductSingle'
+import ProductList from '../productList/ProductList'
+import ProductSingle from '../productSingle/ProductSingle'
 // import {item,cartEmpty} from '../features/productSlice'
-import Nav from './Nav';
+import Nav from '../nav/Nav';
 
 const Home = () => {
     const singleProduct = useSelector((state)=> state.product.currentItem)
@@ -32,9 +32,21 @@ const Home = () => {
         return (
             <div>
                 <Nav />
-                <div>
+                <div className="container-fluid">
                     {/* {state?<ProductList />:<ProductSingle />} */}
-                    <ProductList />
+                    <div className="row">
+                        <div className="col-3 border bg-white">
+                            <h3>Category</h3>
+                        </div>
+                        <div className="col-8">
+                            <ProductList />
+                        </div>
+                    </div>
+
+                    <div className="row border bg-white col-11 mx-auto">
+                        Trending product
+                    </div>
+                    
                 </div>
                 <Link to="/cart"><a className="float-right p-4 mr-5 pointer cart mb-3" >
                 <img src="https://s3.amazonaws.com/nuggetcomfort/cart_icon.png" width="55px"/>
