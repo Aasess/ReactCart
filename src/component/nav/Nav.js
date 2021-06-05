@@ -25,10 +25,10 @@ const Nav = () => {
     }
     return (
         <div>
-            <nav className="navbar navbar-expand navbar-dark bg-dark text-white">
+            <nav className="navbar navbar-expand navbar-dark bg-dark text-white ">
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">
-            <li className="nav-item active">
+            <li className="nav-item active pt-2">
                <Link to ="/" ><a className="nav-link btn" onClick={()=> homeHandler()}><h4 id="homeicon"><i className="fa fa-home"></i> A and B online Nepal</h4></a></Link>
             </li> 
         </ul>

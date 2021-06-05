@@ -25,8 +25,8 @@ const ProductList = () => {
         }))
     }
     const display = selectProduct.map((product)=>{
-        return(<div className="row border rounded mb-3" key={product.id} style={{backgroundColor:'white'}}>
-            <div className="col-12 col-md-3">
+        return(<div className="row border rounded mt-3 mr-3" key={product.id} style={{backgroundColor:'white'}}>
+            <div className="col-12 col-md-3 ">
             
                 <img src={product.image} alt={product.id} className="img-thumbnail "/>
             </div>
@@ -47,7 +47,7 @@ const ProductList = () => {
     return (
             <div>
                 <Search />
-                <div className="productlist mt-2">
+                <div className="productlist mb-3">
                     {display}
                 </div>
             </div>
