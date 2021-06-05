@@ -42,7 +42,7 @@ const initialState = {
           "Pizza is a flatbread generally topped with tomato sauce and cheese and baked in an oven.",
         detail:" Cheese gives us almost all the salt, fat, and protein of the whole pie - three building blocks of what makes food taste good and have good texture. From what I’ve seen, most failures come in the form of simple lack of cheese, rather than poor cheese quality. High end fresh mozzarella might separate a good pizza from a great pizza, but all you usually need to go from bad to good is to just throw on more of whatever regular cheese you use.",
           price: 15.0,
-          category: 'Food',
+          category: 'Pizza',
         image:
           "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
       },
@@ -53,7 +53,7 @@ const initialState = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         detail:" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           price: 10.0,
-          category: 'Food',
+          category: 'Pasta',
         image:
           "https://images.unsplash.com/photo-1576402187878-974f70c890a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1190&q=80",
       },

@@ -27,7 +27,7 @@ const App = () => {
                     {/* redirect to login page if not logged in */}
                     {!user.loggedIn && < Redirect to ='/'/>} 
                 </Route>
-                <Route exact path="/tendingproducts" component={TrendingProductPage}>
+                <Route exact path="/trendingproducts" component={TrendingProductPage}>
                     {/* redirect to login page if not logged in */}
                     {!user.loggedIn && < Redirect to ='/'/>} 
                 </Route>

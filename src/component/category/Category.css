@@ -1,0 +1,6 @@
+#category:hover {
+    background-color:#81b9f5;
+    padding: 2px;
+    color: white;
+    transition: 0.2s ease;
+}

@@ -28,7 +28,7 @@ const TrendingProduct = () => {
 
     const display = trendProduct.map((product)=>{
         return(
-            <div className="col-6 col-md-3">
+            <div className="col-6 col-md-3" key={product.id}>
                 <div className="card fproduct mb-5" >
                     <img className = "card-top-img" src={product.image} alt={product.id} />
                     <div className="middle">

@@ -41,7 +41,7 @@
 
 
 .productlist {
-    height: 600px;
+    height: 700px;
     overflow-y:auto;
 }
 
@@ -51,7 +51,7 @@ a:hover {
 
 .priceproduct {
     position: absolute;
-    top: 75%;
+    bottom: -3%;
 }
 
 .productall {
