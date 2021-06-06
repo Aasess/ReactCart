@@ -8,7 +8,6 @@ const ProductList = (props) => {
     
     const selectProduct = useSelector((state)=> state.product.products)
     const searchItem = useSelector((state)=> state.product.searchItem)
-    console.log(searchItem)
 
     const dispatch = useDispatch()
     const displayItem = (product) => {
@@ -28,6 +27,7 @@ const ProductList = (props) => {
         }))
     }
 
+    
     const displayAllProduct = selectProduct.map((product)=>{
         return(<div className="row border rounded mr-3 mb-2 mt-1 productall" key={product.id} style={{backgroundColor:'white'}}>
             <div className="col-12 col-md-3 ">
@@ -66,15 +66,20 @@ const ProductList = (props) => {
                <Search selectProduct={selectProduct}/>
                <div className="productlist mb-3">
                    <div className="row border rounded mr-3 mb-2 mt-1 productall"  style={{backgroundColor:'white'}}>
-                    <div className="col-12 col-md-3">
-                        <img src={searchItem.image} alt={searchItem.id} className="img-thumbnail " width="250px"/>
-                    </div>
+                        <div className="col-12 col-md-3">
+                            <img src={searchItem.image} alt={searchItem.id} className="img-thumbnail " width="250px"/>
+                        </div>
 
-                    <div className="col-12 col-md-6 pt-3">
-                        <h4>{searchItem.title}</h4>
-                        <p>{searchItem.description}</p>
-                        <p className="float-left priceproduct">$ {searchItem.price}</p>
-                    </div>
+                        <div className="col-12 col-md-6 pt-3">
+                            <h4>{searchItem.title}</h4>
+                            <p>{searchItem.description}</p>
+                            <p className="float-left priceproduct">$ {searchItem.price}</p>
+                        </div>
+
+                        <div className="col-12 col-md-3 float-right pt-4">
+                            <button type="button" className="btn btn-primary btn-sm mb-3 ml-3" onClick={()=>displayItem({product:searchItem})}>View Item</button>
+                            <button type="button" className="btn btn-info btn-sm mb-3 ml-3" onClick={()=>addCart({product:searchItem})}>Add to Cart</button>
+                        </div>
                    </div>
                </div>
            </div>
