@@ -49,7 +49,7 @@ const ProductList = (props) => {
         </div>)
     })
     
-   
+   if(searchItem === null){
     return (
         <div>
             <Search selectProduct={selectProduct}/>
@@ -59,6 +59,28 @@ const ProductList = (props) => {
             </div>
         </div>   
         )
+   }
+   else{
+       return(
+           <div>
+               <Search selectProduct={selectProduct}/>
+               <div className="productlist mb-3">
+                   <div className="row border rounded mr-3 mb-2 mt-1 productall"  style={{backgroundColor:'white'}}>
+                    <div className="col-12 col-md-3">
+                        <img src={searchItem.image} alt={searchItem.id} className="img-thumbnail " width="250px"/>
+                    </div>
+
+                    <div className="col-12 col-md-6 pt-3">
+                        <h4>{searchItem.title}</h4>
+                        <p>{searchItem.description}</p>
+                        <p className="float-left priceproduct">$ {searchItem.price}</p>
+                    </div>
+                   </div>
+               </div>
+           </div>
+       )
+   }
+   
    
     
 }
