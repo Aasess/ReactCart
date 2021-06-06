@@ -5,8 +5,6 @@ import Search from '../search/Search';
 import CatProductList from '../productList/CatProductList'
 
 const ProductList = (props) => {
-    // //state maintaining for tracking search value when entered
-    // const [searchValue,setSearchValue] = React.useState('')
     const selectProduct = useSelector((state)=> state.product.products)
         
     const dispatch = useDispatch()
@@ -25,20 +23,6 @@ const ProductList = (props) => {
             qty: 1
         }))
     }
-    
-    // const searchHandler = (e) => {
-    //     setSearchValue(e.target.value)
-       
-        
-    // }
-    // if(searchValue !== ''){
-    //     selectProduct.forEach((product)=>{
-    //         if(product.title.toLowerCase().indexOf(searchValue.toLowerCase())>-1){
-    //             console.log(product.title)
-                
-    //         }
-    //     })
-    // }
 
     const displayAllProduct = selectProduct.map((product)=>{
         return(<div className="row border rounded mr-3 mb-2 mt-1 productall" key={product.id} style={{backgroundColor:'white'}}>

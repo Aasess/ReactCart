@@ -10,7 +10,8 @@ const SearchDataList = (props) => {
                     }})
         const result = searchResult.map((eachResult,i)=>{
             return(
-                    <option key={i}>{eachResult}</option>  // options to be rendered on datalist
+                    // <option key={i} value={eachResult}/>  // options to be rendered on datalist
+                    <button type="button" className="list-group-item list-group-item-action" key={i}>{eachResult}</button>
                 )
         })
       
