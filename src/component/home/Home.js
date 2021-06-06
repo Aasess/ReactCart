@@ -1,7 +1,8 @@
 /* eslint-disable */
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import {searchItem} from '../../features/productSlice';
 
 import './Home.css'
 // import {logout} from '../features/userSlice'
@@ -15,6 +16,7 @@ import CartButton from '../cart/CartButton'
 import Nav from '../nav/Nav';
 
 const Home = () => {
+    const dispatch = useDispatch()
     const [categoryname,setCategoryname] = React.useState(null)
     const singleProduct = useSelector((state)=> state.product.currentItem)
    
@@ -25,7 +27,9 @@ const Home = () => {
     //function to call when category is hovered
     const filterProduct=(name)=>{
         setCategoryname(name)
-        
+        dispatch(searchItem({
+            value:null
+        }))
         
     }
 

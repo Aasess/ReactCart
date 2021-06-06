@@ -5,14 +5,18 @@ import Search from '../search/Search';
 import CatProductList from '../productList/CatProductList'
 
 const ProductList = (props) => {
+    
     const selectProduct = useSelector((state)=> state.product.products)
-        
+    const searchItem = useSelector((state)=> state.product.searchItem)
+    console.log(searchItem)
+
     const dispatch = useDispatch()
     const displayItem = (product) => {
         dispatch(item({
             product:product.product
         }))
     }
+
 
     const addCart =(product) => {
         dispatch(cart({
@@ -47,14 +51,16 @@ const ProductList = (props) => {
     
    
     return (
-            <div>
-                <Search selectProduct={selectProduct}/>
-                <div className="productlist mb-3">
-                    {  props.categoryname === null ? displayAllProduct:<CatProductList categoryname = {props.categoryname} selectProduct = {selectProduct} displayItem = {displayItem} addCart = {addCart}/> }
-                    
-                </div>
-            </div>   
-            )
+        <div>
+            <Search selectProduct={selectProduct}/>
+            <div className="productlist mb-3">
+                {  props.categoryname === null ? displayAllProduct:<CatProductList categoryname = {props.categoryname} selectProduct = {selectProduct} displayItem = {displayItem} addCart = {addCart}/> }
+                
+            </div>
+        </div>   
+        )
+   
+    
 }
 
 export default ProductList

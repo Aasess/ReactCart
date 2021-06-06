@@ -215,6 +215,8 @@ const initialState = {
     ],
     cart: [],
     currentItem: null,
+    searchItem: null,
+    showSuggestion:false
   };
 
  const productSlice = createSlice({
@@ -248,11 +250,20 @@ const initialState = {
              })
             state.cart = result
          },
+        
+         //if searchitem is selected
+         searchItem:(state,action)=>{
+           state.searchItem = action.payload.value
+         },
 
+         //show suggestion option
+         showSuggestionBox:(state,action)=>{
+           state.showSuggestion = action.payload.value
+         }
 
      }
  })
 
-export const {item,cart,cartEmpty,cartFilter} = productSlice.actions
+export const {item,cart,cartEmpty,cartFilter,searchItem,showSuggestionBox} = productSlice.actions
 
  export default productSlice.reducer
