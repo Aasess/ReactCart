@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Deployment for the App
-[https://60b9ce4799da190007b43b43--trusting-wiles-9b2f56.netlify.app/](https://60b9ce4799da190007b43b43--trusting-wiles-9b2f56.netlify.app/ )
+[https://trusting-wiles-9b2f56.netlify.app/](https://trusting-wiles-9b2f56.netlify.app/)
 
 ## Available Scripts
 
